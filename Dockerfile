@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install sudo
 
 #Copy requirements files to app directory and move into directory. 
 WORKDIR /app
-ADD . /appi
+ADD . /app
 # Install all apt-get requirements
 #RUN sudo apt-get -y dist-upgrade
 RUN sudo apt-get install -y $(grep -v -E '(^#|^$)' requirements.apt)
